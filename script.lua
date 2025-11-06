@@ -82,8 +82,8 @@ MainTab:CreateToggle({
 	end
 })
 
-MainTab:CreateSlider({Name = "Fly Speed", Range = {1, 150}, Increment = 1, CurrentValue = FlySpeed, Callback = function(V) FlySpeed = V end})
-MainTab:CreateSlider({Name = "Walk Speed", Range = {16, 200}, Increment = 1, CurrentValue = humanoid.WalkSpeed, Callback = function(V) humanoid.WalkSpeed = V end})
+MainTab:CreateSlider({Name = "Fly Speed", Range = {1, 9999}, Increment = 1, CurrentValue = FlySpeed, Callback = function(V) FlySpeed = V end})
+MainTab:CreateSlider({Name = "Walk Speed", Range = {1, 9999}, Increment = 1, CurrentValue = humanoid.WalkSpeed, Callback = function(V) humanoid.WalkSpeed = V end})
 MainTab:CreateButton({
 	Name = "TP Nearest Player",
 	Callback = function()
@@ -93,7 +93,7 @@ MainTab:CreateButton({
 })
 
 -- ===== Misc Tab =====
-MiscTab:CreateSlider({Name = "Jump Power", Range = {50, 500}, Increment = 10, CurrentValue = humanoid.JumpPower, Callback = function(V) JumpPowerValue = V humanoid.JumpPower = V end})
+MiscTab:CreateSlider({Name = "Jump Power", Range = {50, 9999}, Increment = 10, CurrentValue = humanoid.JumpPower, Callback = function(V) JumpPowerValue = V humanoid.JumpPower = V end})
 MiscTab:CreateToggle({Name = "Infinite Jump", CurrentValue = false, Callback = function(V) InfJumpEnabled = V end})
 MiscTab:CreateToggle({Name = "NoClip", CurrentValue = false, Callback = function(V) NoClipEnabled = V end})
 MiscTab:CreateToggle({Name = "Low Gravity", CurrentValue = false, Callback = function(V) GravityEnabled = V end})
